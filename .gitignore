@@ -1,0 +1,45 @@
+# Go build artifacts
+/bin/
+/build/
+/dist/
+/out/
+/cmd/s3mini/s3mini
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go cache & test binaries
+*.test
+*.out
+*.cover
+*.prof
+*.tmp
+
+# Logs
+*.log
+
+# Local storage
+/data/
+*.db
+*.db-journal
+
+# Blob storage
+/storage/
+*/blobs/
+*.blob
+
+# Configs (если есть приватные)
+*.env
+.env.*
+config.local.*
+configs/local.*
+
+# IDE & editor junk
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
