@@ -21,14 +21,15 @@
 
 ## 🛠 Архитектура
 ```mermaid
-flowchart TD
-    client[aws-cli / SDK] -->|S3 HTTP| server[Mini S3 Server]
-    server --> router[HTTP Router]
-    router --> handlers[Handlers]
-    handlers --> db[(SQLite / PostgreSQL)]
-    handlers --> blobs[Blob Storage (disk)]
-    worker[Lifecycle Worker] --> db
-    worker --> blobs
+graph TD
+  client[aws-cli or SDK] -->|S3 HTTP| server[Mini S3 Server];
+  server --> router[HTTP Router];
+  router --> handlers[Handlers];
+  handlers --> db[(SQLite or PostgreSQL)];
+  handlers --> blobs[Blob Storage];
+  worker[Lifecycle Worker] --> db;
+  worker --> blobs;
+
 ```
 ## 🚀 Быстрый старт ##
 **1. Установка и запуск**
